@@ -266,3 +266,5 @@ cython_debug/
 nohup.out
 
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm+all,macos
+
+static

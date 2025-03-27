@@ -4,6 +4,7 @@ from opentelemetry import metrics
 
 from random import randint
 from flask import Flask, request
+from flask_cors import CORS
 import logging
 
 # Acquire a tracer
@@ -17,7 +18,8 @@ roll_counter = meter.create_counter(
     description="The number of rolls by roll value",
 )
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
+CORS(app)
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 logger.warning(f"{__name__} started")
