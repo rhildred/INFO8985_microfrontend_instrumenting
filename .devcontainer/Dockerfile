@@ -1,2 +1,2 @@
-FROM mcr.microsoft.com/devcontainers/python
+FROM mcr.microsoft.com/devcontainers/universal:latest
 COPY hosts /etc/ansible/hosts
